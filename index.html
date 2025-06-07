@@ -4,63 +4,55 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
-
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto"
+      rel="stylesheet"
+    />
     <title>Super Mario</title>
   </head>
-
   <body>
     <div class="caixa-video-mario">
-      <video autoplay loop muted>
-        <source src="./video.mp4" type="video/mp4" />
-      </video>
-
+      <video src="./video.mp4" autoplay muted loop></video>
       <div class="mascara-video"></div>
     </div>
 
     <div class="caixa-principal">
-      <img
-        src="./logo Mario.png"
-        alt="Logo do Super Mario"
-        class="logo-mario"
-      />
-      <p>Encanadores Mario e Luigi - Resolvendo Seus Problemas com Estilo!</p>
+      <img src="./logo (2).png" alt="logo super mario" class="logo-mario" />
+      <p>Encanador Mario e Luigi - resolvendo seus Problemas Com Estilo</p>
       <p>
-        Você ja se encontrou em uma situação de emergência com encanamento?
-        vazamento inesperado, conos entupidos ou torneiras que n param de
-        pingar? Nâo se preocupe, porque estamos aqui para salvar o dia
-        Apresentamos a vocês os encanadores mais Famosos do Reinos dos Cogumelos
-        - Mario e Luigi!
+        Você ja encontrou uma situação de emergencia com encanamento? vasamentos
+        inesperados, canos entupidos ou torneira que n para de pingar? Não se
+        preocupe, porque estamos aqui para salvar o seu dia! Apresentamos a
+        vocês os encanadores mais famosos do Reino dos Cogumelos - Mario e Luigi
       </p>
-      <button onclick="Cliqueinobotão()">.Fale conosco</button>
+      <button onclick="cliqueiNoBotão()">Fale conosco</button>
     </div>
 
     <img
-      src="./Mario e Luigi.png"
-      alt="logo Mario e Luigi"
-      class="imagem-Mario-luigi"
+      src="./mario.png"
+      alt="logo mario e luigi"
+      class="imagem-mario-luigi"
     />
-
-    <form class="Fale-conosco" action="https://formsubmit.co/paulacontapessoal45@gmail.com " method="POST">
-      <input placeholder="Seu nome" type="text" name="nome"/>
-      <input placeholder="Seu telefone" type="tel" name="telefone" />
-      <textarea placeholder="Digite seu Problema aqui"name info></textarea>
-      <button onclick="sumirFormulario()">Enviar formulario</button>
+    <form class="fale-conosco" action="https://formsubmit.co/paulaalexandra4423@gmail.com" method="POST">
+      <input id="nome" name="nome" placeholder="Seu nome" type="text" autocomplete="name"/>
+      <input id="email" name="email" placeholder="Seu email" type="email" autocomplete="email"/>
+      <textarea id="problema" name="problema" placeholder="Digite seu problema aqui" autocomplete="off"></textarea>
+      <button onclick="sumirFormulario()">Enviar formulário</button>
     </form>
 
     <div class="mascara-form"></div>
   </body>
-
   <script>
-    let formulario = document.querySelector(".Fale-conosco");
+    let formulario = document.querySelector(".fale-conosco");
     let mascara = document.querySelector(".mascara-form");
 
-    function Cliqueinobotão() {
+    function cliqueiNoBotão() {
       formulario.style.left = "700px";
       mascara.style.visibility = "visible";
     }
-    console.log(formulario);
 
-    function sumirFormulario() {
+    function sumirFomulario() {
       formulario.style.left = "-320px";
       mascara.style.visibility = "hidden";
     }
